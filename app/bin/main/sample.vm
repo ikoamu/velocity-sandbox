@@ -1,0 +1,29 @@
+##マクロ使ってみる
+#parse("./components/h1.vm")
+
+##配列のテスト
+#set ($arr = ["txt", "pdf", "png"])
+
+<html>
+
+
+  <body>
+    ##マクロ使ってみる
+    #h1('テストタイトルです')
+    ##java側で設定した変数が表示できるかをテスト
+    $key
+
+    ##if文のテスト
+    #if ($key2)
+      $key2
+    #else
+      key2 is undefined
+    #end
+
+    ##foreachのテスト
+    #foreach($item in $arr)
+      <span >$item</span>
+    #end
+
+  </body>
+</html>
